@@ -1,16 +1,16 @@
 let calculator = {
-  read(a,b){
-    calculator['readValuesA'] = a;
-    calculator['readValuesB'] = b;
+  read(a, b) {
+      this.a = a;
+      this.b = b;
   },
-  sum(){
-    return Number(calculator['readValuesA']) + Number(calculator['readValuesB']);
+  sum() {
+      return this.a + this.b;
   },
-  mul(){
-    return Number(calculator['readValuesA']) * Number(calculator['readValuesB']);
+  mul() {
+      return this.a * this.b;
   }
-
 };
+
 
 // НЕ УДАЛЯТЬ СТРОКУ, НУЖНА ДЛЯ ПРОВЕРКИ
 window.calculator = calculator; // делает ваш калькулятор доступным глобально
